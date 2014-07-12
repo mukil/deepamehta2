@@ -33,8 +33,6 @@
 		<!-- configure this -->
 		<pathelement location="${appspath}/DeepaMehta Coordination/coordination-platform.jar" />
 		<!-- configure this -->
-		<pathelement location="${appspath}/git-kiezatlas1/kiezatlas.jar" />
-		<!-- configure this -->
 	</path>
 
 	<target name="-default">
