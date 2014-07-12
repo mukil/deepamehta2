@@ -461,4 +461,12 @@ public final class AutoFreeConnectionPreparedStatement implements PreparedStatem
 	public <T> T unwrap(Class<T> arg0) throws SQLException {
 		return statement.unwrap(arg0);
 	}
+
+    public void closeOnCompletion() throws SQLException {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    public boolean isCloseOnCompletion() throws SQLException {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
 }

@@ -221,4 +221,12 @@ public final class AutoFreeConnectionStatement implements Statement {
 	public <T> T unwrap(Class<T> iface) throws SQLException {
 		return statement.unwrap(iface);
 	}
+
+    public void closeOnCompletion() throws SQLException {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    public boolean isCloseOnCompletion() throws SQLException {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
 }
