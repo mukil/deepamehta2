@@ -12,16 +12,16 @@
 	<!-- create build directory -->
 	<target name="init">
 		<mkdir dir="${build}" />
-		<echo>Copying version specific java sources (java ${ant.java.version})</echo>
+		<echo>Copying version specific java sources (java 1.7)</echo> <!-- ${ant.java.version} -->
 		<copy todir="${sources}" overwrite="true">
-			<fileset dir="${sources}/../src-java-${ant.java.version}">
+			<fileset dir="${sources}/../src-java-1.7"> <!-- ${ant.java.version} -->
 				<exclude name="**/.svn/**"/>
 			</fileset>
 		</copy>
 	</target>
 
 	<target name="compile" depends="init" description="compile sources">
-		<javac srcdir="${sources}" destdir="${build}" debug="on" listfiles="yes" encoding="UTF8">
+		<javac srcdir="${sources}" destdir="${build}" debug="on" listfiles="yes" encoding="UTF8" target="1.7">
 			<classpath refid="javalibs" />
 		</javac>
 	</target>
